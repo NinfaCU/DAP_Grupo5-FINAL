@@ -11,6 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.csproj", "{9203576C-03A8-40EC-BD07-37579850C872}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonarQube", "SonarQube", "{598AF0D0-90A0-488C-8CA4-1468999C8DB9}"
+	ProjectSection(SolutionItems) = preProject
+		SonarQube\Inso3CSharp.ruleset = SonarQube\Inso3CSharp.ruleset
+		SonarQube\SolutionBinding.sqconfig = SonarQube\SolutionBinding.sqconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

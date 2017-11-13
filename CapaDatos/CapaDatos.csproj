@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>CapaDatos-1.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>CapaDatos-1.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -42,6 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DAP_ProyectoSistFinanDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAP_ProyectoSistFinanDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DCliente.cs" />
     <Compile Include="DCuota.cs" />
     <Compile Include="DEmpleado.cs" />
@@ -49,12 +56,43 @@
     <Compile Include="DPrestamo.cs" />
     <Compile Include="DVentanilla.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
       <Project>{ef979fd2-5941-412d-b8f2-62f58f9c9cb2}</Project>
       <Name>CapaEntidades</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CapaDatos-1.ruleset" />
+    <None Include="CapaDatos.ruleset" />
+    <None Include="DAP_ProyectoSistFinanDataSet.xsc">
+      <DependentUpon>DAP_ProyectoSistFinanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DAP_ProyectoSistFinanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAP_ProyectoSistFinanDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DAP_ProyectoSistFinanDataSet.xss">
+      <DependentUpon>DAP_ProyectoSistFinanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.5.10.1.1411\analyzers\Google.Protobuf.dll" />
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.5.10.1.1411\analyzers\SonarAnalyzer.CSharp.dll" />
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.5.10.1.1411\analyzers\SonarAnalyzer.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

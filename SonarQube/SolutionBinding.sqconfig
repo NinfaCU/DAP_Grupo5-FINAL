@@ -1,0 +1,11 @@
+{
+  "ServerUri": "http://insoiii.azurewebsites.net",
+  "Organization": null,
+  "ProjectKey": "Inso3",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AV-zzA1DVGy_e8nN1WkE",
+      "ProfileTimestamp": "2017-11-13T00:13:35-05:00"
+    }
+  }
+}

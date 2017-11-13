@@ -10,7 +10,7 @@ namespace CapaDatos
     {
         public static string leerConexion()
         {
-            return "DATA SOURCE = .; INITIAL CATALOG = DAP_ProyectoSistFinan; INTEGRATED SECURITY = True";
+            return "Data Source=laptop-ptktl19e\\estrella;Initial Catalog=DAP_ProyectoSistFinan;User ID=sa";
         }
     }
 }
